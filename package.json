@@ -13,12 +13,20 @@
     "gatsby-plugin-sharp": "^2.2.1",
     "gatsby-source-filesystem": "^2.1.0",
     "gatsby-transformer-sharp": "^2.2.0",
+    "lodash": "^4.17.11",
     "prop-types": "^15.7.2",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
-    "react-helmet": "^5.2.1"
+    "react-helmet": "^5.2.1",
+    "request": "^2.88.0",
+    "unzipper": "^0.10.1"
   },
   "devDependencies": {
+    "eslint": "^5.16.0",
+    "eslint-config-airbnb": "^17.1.0",
+    "eslint-plugin-import": "^2.18.0",
+    "eslint-plugin-jsx-a11y": "^6.2.1",
+    "eslint-plugin-react": "^7.14.2",
     "prettier": "^1.18.2"
   },
   "keywords": [
@@ -26,6 +34,7 @@
   ],
   "license": "MIT",
   "scripts": {
+    "download": "node scripts/retrieve-db.js",
     "build": "gatsby build",
     "develop": "gatsby develop",
     "format": "prettier --write src/**/*.{js,jsx}",
