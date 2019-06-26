@@ -22,6 +22,15 @@ module.exports = {
         path: `${__dirname}/src/data`,
       },
     },
+    {
+      resolve: 'gatsby-plugin-create-client-paths',
+      options: {
+        prefixes: [
+          '/encounter/*',
+          '/merchant/*',
+        ],
+      },
+    },
     'gatsby-transformer-sharp',
     'gatsby-plugin-sharp',
     {
