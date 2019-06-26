@@ -7,6 +7,7 @@ module.exports = {
   plugins: [
     'gatsby-plugin-react-helmet',
     'gatsby-transformer-json',
+    'gatsby-plugin-postcss',
     {
       resolve: 'gatsby-source-filesystem',
       options: {
@@ -29,8 +30,8 @@ module.exports = {
         name: 'gatsby-starter-default',
         short_name: 'starter',
         start_url: '/',
-        background_color: '#999',
-        theme_color: '#999',
+        background_color: '#f7f0eb',
+        theme_color: '#a2466c',
         display: 'minimal-ui',
         icon: 'src/images/dice-icon.png', // This path is relative to the root of the site.
       },

@@ -1,0 +1,38 @@
+.btn {
+  @apply bg-white;
+  @apply text-gray-800;
+  @apply font-semibold;
+  @apply py-2;
+  @apply px-4;
+  @apply border;
+  @apply border-gray-400;
+  @apply rounded;
+  @apply shadow;
+}
+
+.btn:hover {
+  @apply bg-gray-500
+}
+
+.card {
+  @apply bg-gray-200;
+  @apply max-w-sm;
+  @apply rounded;
+  @apply overflow-auto;
+  @apply shadow-lg;
+  @apply m-1;
+
+  flex: 1 0 45%;
+  min-width: 300px;
+  max-width: 100%;
+}
+
+.disable-scrollbars::-webkit-scrollbar {
+    width: 0px;
+    background: transparent; /* Chrome/Safari/Webkit */
+}
+
+.disable-scrollbars {
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none;  /* IE 10+ */
+}
