@@ -21,6 +21,7 @@ rules: {
   'react/jsx-filename-extension': 0,
   'react/jsx-one-expression-per-line': 0,
   'react/react-in-jsx-scope': 1,
+  'react/no-array-index-key': 0,
   'import/no-extraneous-dependencies': [error, { devDependencies: true }],
   'implicit-arrow-linebreak': 0,
 }
