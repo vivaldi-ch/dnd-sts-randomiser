@@ -42,6 +42,7 @@
     "eslint-plugin-react": "^7.14.2",
     "eslint-plugin-security": "^1.4.0",
     "eslint-plugin-standard": "^4.0.0",
+    "gh-pages": "^2.0.1",
     "prettier": "^1.18.2",
     "tailwindcss": "^1.0.4"
   },
@@ -51,19 +52,18 @@
   "license": "MIT",
   "scripts": {
     "download": "node scripts/retrieve-db.js",
-    "build": "gatsby build",
-    "develop": "gatsby develop",
+    "build": "node_modules/.bin/gatsby build",
+    "develop": "node_modules/.bin/gatsby develop",
     "format": "prettier --write src/**/*.{js,jsx}",
     "start": "npm run develop",
     "serve": "gatsby serve",
-    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\""
+    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\"",
+    "lint": "eslint --ignore-path .gitignore .",
+    "deploy": "node_modules/.bin/gatsby build --prefix-paths && gh-pages --message \"[skip ci] Updates\" -d public"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/gatsbyjs/gatsby-starter-default"
-  },
-  "bugs": {
-    "url": "https://github.com/gatsbyjs/gatsby/issues"
+    "url": "https://github.com/vivaldi-ch/dnd-sts-randomiser"
   },
   "eslintConfig": {
     "extends": "eslint-config-postcss"
