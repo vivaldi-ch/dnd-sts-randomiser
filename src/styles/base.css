@@ -27,6 +27,22 @@
   max-width: 100%;
 }
 
+.card-header {
+  @apply font-bold;
+  @apply text-xl;
+  @apply mb-2;
+}
+
+.card-type {
+  @apply text-xs;
+  @apply text-gray-500;
+}
+
+.card-desc {
+  @apply text-gray-600;
+  @apply text-sm;
+}
+
 .disable-scrollbars::-webkit-scrollbar {
     width: 0px;
     background: transparent; /* Chrome/Safari/Webkit */
