@@ -27,6 +27,11 @@ const getContentFromType = (type) => {
           If you are already proficient with that skill, you gain double proficiency instead.
         `,
       };
+    case 'extra-proficiency-bonus':
+      return {
+        title: 'Extra Proficiency Bonus',
+        desc: 'Add 1 to your proficiency bonus. ',
+      };
     case 'feats':
       return {
         title: 'Feats',
@@ -56,7 +61,7 @@ const Card = ({ type }) => {
     <div className="card disable-scrollbars">
       <div className="px-6 py-4">
         <div className="font-bold text-xl mb-2">{title}</div>
-        <p className="text-gray-700 text-base">{desc}</p>
+        <p className="text-gray-800 text-base">{desc}</p>
       </div>
     </div>
   );

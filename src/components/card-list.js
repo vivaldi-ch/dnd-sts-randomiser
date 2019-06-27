@@ -16,7 +16,21 @@ const NormalEncounter = quantity => (
   </div>
 );
 
-const CardList = ({ type, quantity }) => NormalEncounter(quantity);
+const DeadlyEncounter = () => (
+  <div className="flex flex-row flex-wrap justify-center">
+    <Card type="extra-attribute2" />
+    <Card type="feats" />
+    <Card type="extra-proficiency-bonus" />
+  </div>
+);
+
+const CardList = ({ type, quantity }) => {
+  switch (type) {
+    case 'normal': return NormalEncounter(quantity);
+    case 'deadly': return DeadlyEncounter();
+    default: return <></>;
+  }
+};
 
 CardList.propTypes = {
   type: PropTypes.oneOf(['normal', 'deadly', 'merchant']),
