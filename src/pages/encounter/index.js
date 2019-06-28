@@ -8,6 +8,10 @@ import Layout from '../../components/layout';
 import CardList from '../../components/card-list';
 import { randomGoldLoot } from '../../utils/random';
 
+import RefreshIcon from '../../images/refresh.svg';
+
+const DEADLY_GOLD_MULTIPLIER = 3;
+
 const EncounterPage = (props) => {
   const {
     location: { pathname },
@@ -18,26 +22,33 @@ const EncounterPage = (props) => {
   return (
     <Layout>
       <div className="flex flex-col-reverse md:flex-row md:justify-between">
-        <h1>{capitalize(encounterType)} Encounter</h1>
+        <div className="flex flex-row items-center justify-start">
+          <h1 className="flex-initial">{capitalize(encounterType)} Encounter</h1>
+          <div className="px-4">
+            <Link to={`/encounter/${encounterType}`}>
+              <img className="h-4 w-4" src={RefreshIcon} alt="refresh" />
+            </Link>
+          </div>
+        </div>
         <div className="text-right pb-3 underline text-blue-500 hover:text-gray-600">
           <Link to="/">Back</Link>
         </div>
       </div>
       <p className="text-gray-600 text-sm">
-        You gain {randomGoldLoot() * (encounterType === 'deadly' ? 3 : 1)} gp
+        You gain {randomGoldLoot() * (encounterType === 'deadly' ? DEADLY_GOLD_MULTIPLIER : 1)} gp
       </p>
       <>
         <p>Choose one from the following: </p>
         <CardList type="normal" />
       </>
-      {
-        encounterType === 'deadly' ? (
-          <div className="my-6">
-            <p>Also choose one from the following: </p>
-            <CardList type="deadly" />
-          </div>
-        ) : ''
-      }
+      {encounterType === 'deadly' ? (
+        <div className="my-6">
+          <p>Also choose one from the following: </p>
+          <CardList type="deadly" />
+        </div>
+      ) : (
+        ''
+      )}
     </Layout>
   );
 };
