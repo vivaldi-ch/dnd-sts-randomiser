@@ -63,7 +63,7 @@ jobs:
           at: ~/project/
       - add_ssh_keys:
           fingerprints:
-            - "f9:68:22:93:9b:80:28:8a:d7:5b:cd:22:28:71:4f:c1"
+            - "b6:78:8b:55:f6:17:76:9f:22:08:a5:f7:10:b5:8c:7a"
       - run:
           name: Set git config
           command: |
