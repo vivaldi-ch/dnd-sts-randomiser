@@ -6,9 +6,10 @@ import capitalize from 'lodash/capitalize';
 
 import Layout from '../../components/layout';
 import CardList from '../../components/card-list';
+import SEO from '../../components/seo';
+import RefreshIcon from '../../images/refresh.svg';
 import { randomGoldLoot } from '../../utils/random';
 
-import RefreshIcon from '../../images/refresh.svg';
 
 const DEADLY_GOLD_MULTIPLIER = 3;
 
@@ -21,6 +22,7 @@ const EncounterPage = (props) => {
 
   return (
     <Layout>
+      <SEO title={`${capitalize(encounterType)} Encounter`} />
       <div className="flex flex-col-reverse md:flex-row md:justify-between">
         <div className="flex flex-row items-center justify-start">
           <h1 className="flex-initial">{capitalize(encounterType)} Encounter</h1>
