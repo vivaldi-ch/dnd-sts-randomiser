@@ -1,2 +1,0 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[5],{158:function(n,e,t){"use strict";t.r(e);var a=t(0),o=t.n(a);e.default=function(){return o.a.createElement("h1",null,"To be added")}}}]);
-//# sourceMappingURL=component---src-pages-merchant-js-9e6a6ccab209da637ba7.js.map
