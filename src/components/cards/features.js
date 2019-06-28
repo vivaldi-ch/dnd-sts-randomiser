@@ -9,7 +9,10 @@ const useFeatures = () => {
   } = useStaticQuery(
     graphql`
       {
-        allFeaturesJson(filter: { level: { lte: 5 } }) {
+        allFeaturesJson(filter: {
+          level: { lte: 5 },
+          name: { ne: "Spellcasting" }
+        }) {
           nodes {
             level
             name
@@ -18,6 +21,7 @@ const useFeatures = () => {
               name
             }
           }
+          distinct(field: name)
         }
       }
     `,
@@ -57,9 +61,7 @@ const FeatureCard = () => {
   const features = useFeatures();
   const sortedFeatures = getRandomFeaturesByLevel(features);
 
-  const randomFeature = sortedFeatures[
-    Math.floor(Math.random() * sortedFeatures.length)
-  ];
+  const randomFeature = sortedFeatures[Math.floor(Math.random() * sortedFeatures.length)];
 
   return (
     <div className="card bg-yellow-100 disable-scrollbars">
