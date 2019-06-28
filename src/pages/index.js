@@ -10,13 +10,13 @@ const IndexPage = () => (
     <p>Only use on your dungeon master&apos;s discretion.</p>
     <div className="flex flex-row">
       <div className="p-2">
-        <Link to="/encounter/deadly">
-          <button className="btn" type="button">Deadly</button>
+        <Link to="/encounter/normal">
+          <button className="btn" type="button">Normal</button>
         </Link>
       </div>
       <div className="p-2">
-        <Link to="/encounter/normal">
-          <button className="btn" type="button">Normal</button>
+        <Link to="/encounter/deadly">
+          <button className="btn" type="button">Deadly</button>
         </Link>
       </div>
     </div>
