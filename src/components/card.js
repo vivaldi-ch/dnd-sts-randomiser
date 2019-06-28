@@ -30,12 +30,12 @@ const getContentFromType = (type) => {
     case 'extra-proficiency-bonus':
       return {
         title: 'Extra Proficiency Bonus',
-        desc: 'Add 1 to your proficiency bonus. ',
+        desc: 'Add 1 to your proficiency bonus.',
       };
     case 'feats':
       return {
         title: 'Feats',
-        desc: 'Placeholder description.',
+        desc: 'Gain 1 feat.',
       };
     case 'consumables':
       return {
@@ -73,6 +73,7 @@ Card.propTypes = {
     'extra-attribute1',
     'extra-attribute2',
     'extra-proficiency',
+    'extra-proficiency-bonus',
     'features',
     'spells',
     'feats',
