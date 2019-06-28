@@ -68,7 +68,6 @@ const FeatureCard = () => {
         <div className="font-bold text-xl mb-2">{randomFeature.name}</div>
         <div className="text-gray-600 text-sm">{randomFeature.class.name}</div>
         <div className="text-gray-600 text-sm mb-1">Level: {randomFeature.level}</div>
-        <div className="text-gray-800 text-xs">{randomFeature.desc}</div>
       </div>
     </div>
   );
