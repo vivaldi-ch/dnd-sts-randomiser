@@ -12,7 +12,7 @@ const NormalEncounter = quantity => (
   <div className="flex flex-row flex-wrap justify-center">
     <Card type="extra-hit-die" />
     <Card type="extra-proficiency" />
-    {times(quantity, i => (coinFlip(0.7) ? <FeatureCard key={i} /> : <SpellCard key={i} />))}
+    {times(quantity, i => (coinFlip(0.65) ? <FeatureCard key={i} /> : <SpellCard key={i} />))}
   </div>
 );
 
