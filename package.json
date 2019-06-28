@@ -53,13 +53,14 @@
   "scripts": {
     "download": "node scripts/retrieve-db.js",
     "build": "node_modules/.bin/gatsby build",
+    "build:cname": "echo 'dnd-sts.ibel.io' > ./public/CNAME",
     "develop": "node_modules/.bin/gatsby develop",
     "format": "prettier --write src/**/*.{js,jsx}",
     "start": "npm run develop",
     "serve": "gatsby serve",
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\"",
     "lint": "eslint --ignore-path .gitignore .",
-    "deploy": "node_modules/.bin/gatsby build --prefix-paths && gh-pages --message \"[skip ci] Updates\" -d public"
+    "deploy": "node_modules/.bin/gatsby build --prefix-paths && npm run build:cname && gh-pages --message \"[skip ci] Updates\" -d public"
   },
   "repository": {
     "type": "git",
