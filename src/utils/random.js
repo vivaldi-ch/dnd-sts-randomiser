@@ -14,7 +14,7 @@ function getRandomIntInclusive(min, max) {
   return Math.floor(Math.random() * (intMax - intMin + 1)) + intMin;
 }
 
-export const coinFlip = () => getRandomIntInclusive(0, 1) === 1;
+export const coinFlip = (weight = 0.5) => Math.random() < weight;
 
 export const randomHitDie = () => 2 * getRandomIntInclusive(3, 6);
 
