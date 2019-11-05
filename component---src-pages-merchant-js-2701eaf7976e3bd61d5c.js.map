@@ -1,0 +1,1 @@
+{"version":3,"sources":["webpack:///./src/pages/merchant.js"],"names":["MerchantPage"],"mappings":"2FAAA,gCAIeA,UAFM,kBAAM","file":"component---src-pages-merchant-js-2701eaf7976e3bd61d5c.js","sourcesContent":["import React from 'react';\n\nconst MerchantPage = () => <h1>To be added</h1>;\n\nexport default MerchantPage;\n"],"sourceRoot":""}
