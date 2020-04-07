@@ -1,2 +1,2 @@
 (window.webpackJsonp=window.webpackJsonp||[]).push([[6],{gsIz:function(n,e,t){"use strict";t.r(e);var a=t("q1tI"),o=t.n(a);e.default=function(){return o.a.createElement("h1",null,"To be added")}}}]);
-//# sourceMappingURL=component---src-pages-merchant-js-2701eaf7976e3bd61d5c.js.map
+//# sourceMappingURL=component---src-pages-merchant-js-3a3465455b640ea9130b.js.map
